@@ -13,3 +13,4 @@ foreach ($project in $projects) {
     Copy-Item ".\ca.ruleset.xml" -Destination "$($project.Directory.FullName)\ca.ruleset"
 }
 dotnet restore
+
