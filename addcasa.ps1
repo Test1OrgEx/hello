@@ -10,6 +10,6 @@ foreach ($project in $projects) {
     }
     dotnet add $project.FullName package Microsoft.CodeAnalysis.FxCopAnalyzers
     dotnet add $project.FullName package StyleCop.Analyzers
-    Copy-Item ".\$(SolutionDir)\ca.ruleset" -Destination "$($project.Directory.FullName)\ca.ruleset"
+    Copy-Item ".\ca.ruleset.xml" -Destination "$($project.Directory.FullName)\ca.ruleset"
 }
 dotnet restore
